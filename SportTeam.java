@@ -12,6 +12,9 @@ public class SportTeam{
         this.city = city;
         this.championshipsWon = championshipsWon;
     }
+    //Getter for SportTeamName
+    
+    
 
     
     @Override
