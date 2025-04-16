@@ -21,6 +21,16 @@ public class SportTeam{
     public double getChampionshipsWon(){
         return championshipsWon;
     }
+
+    //Setter for ChampionshipsWon
+    public void setChampionshipsWon(int championshipsWon){
+        this.championshipsWon = championshipsWon;
+    }
+
+    //Getter for City
+    public String getCity(){
+        return city;
+    }
       
     @Override
     //Display Methods
