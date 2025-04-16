@@ -13,6 +13,8 @@ public class SportTeam{
         this.championshipsWon = championshipsWon;
     }
     //Getter for SportTeamName
+
+    public double getChampionshipsWon(){return championshipsWon;}
     
     
 
