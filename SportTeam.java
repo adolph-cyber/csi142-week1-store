@@ -1,10 +1,12 @@
 //SportTeam.java
 public class SportTeam{
 
+    //SportTeam Fields
     private String sportTeamName;
     private String city;
     private int championshipsWon;
 
+    //Constructors to initialize
     public SportTeam(String sportTeamName, String city, int championshipsWon){
         this.sportTeamName = sportTeamName;
         this.city = city;
@@ -13,7 +15,8 @@ public class SportTeam{
 
     
     @Override
+    //Display Methods
     public String toString(){
-        return "SportTeam" + "name: " + name + ", city: " + city + ", championshipsWon: " + championshipsWon;
+        return "SportTeam\n" + "name: " + name + ", city: " + city + ", championshipsWon: " + championshipsWon;
     }
 }
