@@ -11,6 +11,9 @@ public class SportTeam{
         this.championshipsWon = championshipsWon;
     }
 
+    public double getChampionshipsWon(){
+        return championshipsWon;}
+
     
     @Override
     public String toString(){
