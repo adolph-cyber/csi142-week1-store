@@ -28,16 +28,17 @@ public class SportTeam{
         return Coach;
     }
 
+     //Getter for City
+    public String getCity(){
+        return city;
+    }
+
     //Setter for ChampionshipsWon
     public void setChampionshipsWon(int championshipsWon){
         this.championshipsWon = championshipsWon;
     }
 
-    //Getter for City
-    public String getCity(){
-        return city;
-    }
-
+    //setter for Caoch
     public void setCoach(String newCoach){
         this.Coach=newcoach;
     }
