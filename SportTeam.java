@@ -13,12 +13,15 @@ public class SportTeam{
         this.championshipsWon = championshipsWon;
     }
     //Getter for SportTeamName
-
-    public double getChampionshipsWon(){return championshipsWon;}
+    public String getSportTeamName(){
+        return sportTeamName;
+    }
     
-    
-
-    
+    //Getter for ChampionshipsWon
+    public double getChampionshipsWon(){
+        return championshipsWon;
+    }
+      
     @Override
     //Display Methods
     public String toString(){
