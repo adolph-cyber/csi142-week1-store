@@ -30,7 +30,7 @@ public class SportTeam{
     }
 
     //Setter for ChampionshipsWon
-    Public void setChampionshipsWon(String ChampioshipsWon){
+    Public void setChampionshipsWon(int ChampionshipsWon){
         this.ChampionshipsWon = ChampionshipsWon;
     }
 
@@ -39,24 +39,24 @@ public class SportTeam{
         return Coach;
     }
 
+    //Setter for Coach
+    public void setCoach(String Coach){
+        this.Coach = Coach;
+    }
+
      //Getter for City
     public String getCity(){
         return city;
     }
 
-    //Setter for ChampionshipsWon
-    public void setChampionshipsWon(int championshipsWon){
-        this.championshipsWon = championshipsWon;
-    }
-
-    //setter for Caoch
-    public void setCoach(String newCoach){
-        this.Coach=newcoach;
+    //Setter for City
+    public void setCity(String City){
+        this.City = City;
     }
       
     @Override
     //Display Methods
     public String toString(){
-        return "SportTeam\n" + "name: " + name + ", city: " + city + ", championshipsWon: " + championshipsWon "Coach\n" +Coach+;
+        return "SportTeam\n" + "SportTeamName: " + SportTeamName + ", City: " + City + ", ChampionshipsWon: " + ChampionshipsWon + "Coach: " + Coach;
     }
 }
