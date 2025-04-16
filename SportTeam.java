@@ -2,21 +2,26 @@
 public class SportTeam{
 
     //SportTeam Fields
-    private String sportTeamName;
-    private String city;
-    private int championshipsWon;
-    private String coach;
+    private String SportTeamName;
+    private String City;
+    private int ChampionshipsWon;
+    private String Coach;
 
     //Constructors to initialize
-    public SportTeam(String sportTeamName, String city, int championshipsWon,String Coach){
-        this.sportTeamName = sportTeamName;
-        this.city = city;
-        this.championshipsWon = championshipsWon;
-        this.Coach=Coach;
+    public SportTeam(String SportTeamName, String City, int ChampionshipsWon,String Coach){
+        this.SportTeamName = SportTeamName;
+        this.City = City;
+        this.ChampionshipsWon = ChampionshipsWon;
+        this.Coach = Coach;
     }
     //Getter for SportTeamName
     public String getSportTeamName(){
-        return sportTeamName;
+        return SportTeamName;
+    }
+
+    //Setter for SportTeamName
+    public void setSportTeamName(String SportTeamName){
+        this.SportTeamName = SportTeamName;
     }
     
     //Getter for ChampionshipsWon
@@ -24,6 +29,12 @@ public class SportTeam{
         return championshipsWon;
     }
 
+    //Setter for ChampionshipsWon
+    Public void setChampionshipsWon(String ChampioshipsWon){
+        this.ChampionshipsWon = ChampionshipsWon;
+    }
+
+    //Getter for Coach
     public String getCoach(){
         return Coach;
     }
