@@ -1,1 +1,1 @@
-# csi142-week1-store
+# csi142-week1-sportsteam
