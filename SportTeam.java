@@ -6,13 +6,15 @@ public class SportTeam{
     private String City;
     private int ChampionshipsWon;
     private String Coach;
+    private String jerseyNo;
 
     //Constructors to initialize
-    public SportTeam(String SportTeamName, String City, int ChampionshipsWon,String Coach){
+    public SportTeam(String SportTeamName, String City, int ChampionshipsWon,String Coach, String jerseyNo){
         this.SportTeamName = SportTeamName;
         this.City = City;
         this.ChampionshipsWon = ChampionshipsWon;
         this.Coach = Coach;
+        this.jerseyNo=jerseyNo;
     }
     //Getter for SportTeamName
     public String getSportTeamName(){
@@ -53,10 +55,17 @@ public class SportTeam{
     public void setCity(String City){
         this.City = City;
     }
+
+    public String getjerseyNo(){
+       return jerseyNo;
+    }
+
+    public void setjerseyNo(String jerseyNo){
+        this.jerseyNo=jerseyNo;
       
     @Override
     //Display Methods
     public String toString(){
-        return "SportTeam\n" + "SportTeamName: " + SportTeamName + ", City: " + City + ", ChampionshipsWon: " + ChampionshipsWon + "Coach: " + Coach;
+        return "SportTeam\n" + "SportTeamName: " + SportTeamName + ", City: " + City + ", ChampionshipsWon: " + ChampionshipsWon + "Coach: " + Coach "jerseyNo"+jerseyNo;
     }
 }
