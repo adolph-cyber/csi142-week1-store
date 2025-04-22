@@ -1,0 +1,63 @@
+import java.util.List;
+
+public class ObjectSorter {
+
+    // Selection Sort for a string field (e.g., name)
+    public static void selectionSort(List<String> list) {
+        for (int i = 0; i < list.size() - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < list.size(); j++) {
+                if (list.get(j).compareTo(list.get(minIndex)) < 0) {
+                    minIndex = j;
+                }
+            }
+            // Swap
+            String temp = list.get(minIndex);
+            list.set(minIndex, list.get(i));
+            list.set(i, temp);
+        }
+    }
+
+    // Insertion Sort for a string field (e.g., name)
+    public static void insertionSort(List<String> list) {
+        for (int i = 1; i < list.size(); i++) {
+            String key = list.get(i);
+            int j = i - 1;
+            while (j >= 0 && list.get(j).compareTo(key) > 0) {
+                list.set(j + 1, list.get(j));
+                j--;
+            }
+            list.set(j + 1, key);
+        }
+    }
+
+    // Linear Search for a string field (e.g., name), returning an index or -1
+    public static int linearSearch(List<String> list, String target) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(target)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // Binary Search for a string field (requires sorted data)
+    public static int binarySearch(List<String> list, String target) {
+        int left = 0;
+        int right = list.size() - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int comparison = list.get(mid).compareTo(target);
+
+            if (comparison == 0) {
+                return mid;
+            } else if (comparison < 0) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    }
+}
