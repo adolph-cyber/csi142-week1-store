@@ -1,54 +1,57 @@
 import java.util.List;
 
-public class Sorter{
+public class Sorter {
 
-    // Selection Sort by Price (for Produce)
-    public static void selectionSortByPrice(List<Produce> produceList){
-        for (int i = 0; i < produceList.size() - 1; i++){
+    // Selection Sort for a numeric field (e.g., score, price)
+    public static void selectionSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < produceList.size(); j++){
-                if (produceList.get(j).getPrice() < produceList.get(minIndex).getPrice()){
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }
-            Produce temp = produceList.get(minIndex);
-            produceList.set(minIndex, produceList.get(i));
-            produceList.set(i, temp);
+            // Swap
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
         }
     }
 
-    // Insertion Sort by Jersey Number (for Players)
-    public static void insertionSortByJerseyNumber(List<Player> players){
-        for (int i = 1; i < players.size(); i++){
-            Player key = players.get(i);
+    // Insertion Sort for a numeric field (e.g., score, price)
+    public static void insertionSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
             int j = i - 1;
-            while (j >= 0 && players.get(j).getJerseyNumber() > key.getJerseyNumber()){
-                players.set(j + 1, players.get(j));
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
                 j--;
             }
-            players.set(j + 1, key);
+            array[j + 1] = key;
         }
     }
 
-    // Linear Search for Produce Name
-    public static int linearSearchProduce(List<Produce> produceList, String name){
-        for (int i = 0; i < produceList.size(); i++){
-            if (produceList.get(i).getName().equalsIgnoreCase(name)){
+    // Linear Search for a string field (e.g., name), returning an index or -1
+    public static int linearSearch(List<String> list, String target) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(target)) {
                 return i;
             }
         }
         return -1;
     }
 
-    // Binary Search for Player Jersey Number (requires sorted data)
-    public static int binarySearchPlayer(List<Player> players, int jerseyNumber){
-        int left = 0, right = players.size() - 1;
-        while (left <= right){
+    // Binary Search for a numeric field (requires sorted data)
+    public static int binarySearch(int[] array, int target) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left <= right) {
             int mid = left + (right - left) / 2;
-            if (players.get(mid).getJerseyNumber() == jerseyNumber){
+
+            if (array[mid] == target) {
                 return mid;
-            }
-            if (players.get(mid).getJerseyNumber() < jerseyNumber){
+            } else if (array[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
