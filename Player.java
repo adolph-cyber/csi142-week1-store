@@ -1,6 +1,6 @@
 // Player.java
 public class Player {
-    private String Jame;
+    private String Name;
     private int JerseyNumber;
 
     public Player(String Name, int JerseyNumber) {
