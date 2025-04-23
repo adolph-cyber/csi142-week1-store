@@ -10,6 +10,24 @@ public class Product {
 
     //Constructors to initialize
     public Product(String name, String category, double price, int quantity, String unit, String supplier) {
+          if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Product name cannot be null or empty.");
+        }
+        if (category == null || category.isEmpty()) {
+            throw new IllegalArgumentException("Category cannot be null or empty.");
+        }
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative.");
+        }
+        if (quantity < 0) {
+            throw new IllegalArgumentException("Quantity cannot be negative.");
+        }
+        if (unit == null || unit.isEmpty()) {
+            throw new IllegalArgumentException("Unit cannot be null or empty.");
+        }
+        if (supplier == null || supplier.isEmpty()) {
+            throw new IllegalArgumentException("Supplier cannot be null or empty.");
+        }
         this.name = name;
         this.category = category;
         this.price = price;
