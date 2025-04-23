@@ -1,7 +1,7 @@
 public class ProductSort {
     // Selection Sort for numeric array (ascending order)
-    public static void selectionSort(int[] arr)
-    {
+    
+    public static void selectionSort(int[] arr) {
         int n = arr.Length;
         for (int i = 0; i < n - 1; i++)
         {
@@ -21,8 +21,7 @@ public class ProductSort {
     }
 
     // Insertion Sort for numeric array (ascending order)
-    public static void insertionSort(int[] arr)
-    {
+    public static void insertionSort(int[] arr) {
         int n = arr.Length;
         for (int i = 1; i < n; i++)
         {
@@ -39,8 +38,7 @@ public class ProductSort {
 
     // Iterative Binary Search for numeric array
     // Returns the index of target if found, otherwise -1
-    public static int binarySearch(int[] arr, int target)
-    {
+    public static int binarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.Length - 1;
         while (left <= right)
