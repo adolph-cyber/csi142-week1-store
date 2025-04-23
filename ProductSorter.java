@@ -1,5 +1,4 @@
-public class Sort
-{
+public class ProductSort {
     // Selection Sort for numeric array (ascending order)
     public static void selectionSort(int[] arr)
     {
