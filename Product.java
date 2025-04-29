@@ -7,10 +7,10 @@ public class Product {
     private double price;
     private int quantity;
     private String unit;
-    private String supplier;
+    private String Buyer;
 
     // Constructor using custom exception
-    public Product(String name, String category, double price, int quantity, String unit, String supplier)
+    public Product(String name, String category, double price, int quantity, String unit, String Buyer)
             throws InvalidProductException {
 
         if (name == null || name.isEmpty()) {
@@ -28,8 +28,8 @@ public class Product {
         if (unit == null || unit.isEmpty()) {
             throw new InvalidProductException("Unit cannot be null or empty.");
         }
-        if (supplier == null || supplier.isEmpty()) {
-            throw new InvalidProductException("Supplier cannot be null or empty.");
+        if (Buyer == null || Buyer.isEmpty()) {
+            throw new InvalidProductException("Buyer cannot be null or empty.");
         }
 
         this.name = name;
@@ -37,7 +37,7 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
         this.unit = unit;
-        this.supplier = supplier;
+        this.Buyer = Buyer;
     }
 
     // Getters
