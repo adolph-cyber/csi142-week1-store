@@ -11,26 +11,7 @@ public class Product {
 
     // Constructor using custom exception
     public Product(String name, String category, double price, int quantity, String unit, String Buyer)
-            throws InvalidProductException {
-
-        if (name == null || name.isEmpty()) {
-            throw new InvalidProductException("Product name cannot be null or empty.");
-        }
-        if (category == null || category.isEmpty()) {
-            throw new InvalidProductException("Category cannot be null or empty.");
-        }
-        if (price < 0) {
-            throw new InvalidProductException("Price cannot be negative.");
-        }
-        if (quantity < 0) {
-            throw new InvalidProductException("Quantity cannot be negative.");
-        }
-        if (unit == null || unit.isEmpty()) {
-            throw new InvalidProductException("Unit cannot be null or empty.");
-        }
-        if (Buyer == null || Buyer.isEmpty()) {
-            throw new InvalidProductException("Buyer cannot be null or empty.");
-        }
+    {
 
         this.name = name;
         this.category = category;
@@ -67,16 +48,13 @@ public class Product {
 
     // Setters with exception
     public void setPrice(double price) throws InvalidProductException {
-        if (price < 0) {
-            throw new InvalidProductException("Price cannot be negative.");
-        }
+       
         this.price = price;
     }
 
     public void setQuantity(int quantity) throws InvalidProductException {
-        if (quantity < 0) {
-            throw new InvalidProductException("Quantity cannot be negative.");
-        }
+       
+        
         this.quantity = quantity;
     }
 
