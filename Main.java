@@ -27,6 +27,20 @@ public class Main {
                 fruit.display();
             }
 
+           //sort the fruits by price using Insertion sort    
+            System.out.println("\n=== ARRAY BEFORE INSERTION SORT (Same as Original) ===");
+            for (FruitProduce fruit : fruitsForInsertionSort) {
+                 fruit.display(); // Show the copied, unsorted array
+            }
+
+            // Sort the 'fruitsForInsertionSort' array using insertion sort
+            SorterUtility.insertionSort(fruitsForInsertionSort);
+
+            System.out.println("\n=== AFTER SORTING BY PRICE (Insertion Sort) ===");
+            for (FruitProduce fruit : fruitsForInsertionSort) {
+                fruit.display();
+            }
+
             //  Binary search by price
             double searchPrice1 = 2.0;
             double searchPrice2 = 3.8;
