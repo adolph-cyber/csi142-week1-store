@@ -1,4 +1,4 @@
-public class FruitProduce extends LivestockProc {
+public class FruitProduce extends LivestockProduce{
     private String fruitType;
     private String storageCondition;
     private String ripeningSeason;
